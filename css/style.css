@@ -136,10 +136,21 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    margin-bottom: -5px;
 }
 
 .logo img {
-    height: 40px;
+    height: 100px;
+    border-radius: 25%;
+}
+
+.hero-logo {
+    height: 500px;
+    margin-bottom: -100px;
+}
+
+.footer-logo-image {
+    height: 70px;
 }
 
 .nav-menu {
@@ -358,8 +369,8 @@ footer {
 }
 
 .footer-logo img {
-    height: 40px;
-    margin-bottom: 1rem;
+    height: 200px;
+    margin-bottom: 0.5rem;
 }
 
 .footer-links h4 {
