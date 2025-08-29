@@ -19,17 +19,7 @@ A modern, responsive website for Sharede Vision, a digital marketing agency spec
 5. **Google Ads** - Details about Google Ads (PPC) services
 6. **SEO** - Information about SEO services
 7. **Contact Us** - Contact form and information
-
-## Brand Colors
-
-- Teal: #34cce1
-- Blue: #3177ec
-- Purple: #6e61ea
-
-## Font
-
-- Sora (Google Fonts)
-
+   
 ## Setup
 
 1. Clone the repository
@@ -38,5 +28,5 @@ A modern, responsive website for Sharede Vision, a digital marketing agency spec
 
 ## License
 
-All rights reserved.
+2025 Sharede LLC. All rights reserved.
 
