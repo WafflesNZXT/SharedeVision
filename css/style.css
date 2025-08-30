@@ -466,3 +466,14 @@ footer {
     }
 }
 
+.form-message {
+    margin-top: 10px;
+    font-weight: bold;
+    display: block;
+}
+.form-message.success {
+    color: green;
+}
+.form-message.error {
+    color: red;
+}

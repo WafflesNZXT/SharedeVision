@@ -1,0 +1,155 @@
+/* ==========================
+   Global Animations
+========================== */
+
+/* Fade Up */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Bounce Hover */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* ==========================
+   Applied Animations
+========================== */
+
+/* Hero Section */
+.hero-content {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Section Titles (scroll-triggered) */
+.section-title h2 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+.section-title h2.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Service Cards (hover) */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Why Choose Us - Feature Icons (scroll-triggered) */
+.feature-icon {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s ease;
+}
+.feature-icon.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Testimonials (scroll-triggered) */
+.testimonial-card {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 1s ease;
+}
+.testimonial-card.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* CTA Button (hover bounce) */
+.cta-section .btn-secondary:hover {
+  animation: bounce 0.6s ease;
+}
+
+/* Services Section - Service Cards (scroll-triggered) */
+.service-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.service-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ==========================
+   Extra Animations
+========================== */
+
+/* Header Nav Links (hover underline slide) */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Clients Logos (scroll-triggered) */
+.client-logo {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s ease;
+}
+.client-logo.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Footer Social Links (hover rotate-in) */
+.social-links a {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-links a:hover {
+  transform: rotate(-5deg) scale(1.1);
+  color: #0073e6; /* tweak to your brand color */
+}
+
+/*Why It Matters Section Boxes */
+.why-box {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.why-box.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*How We Deliver Section Items */
+.deliver-step {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
+.deliver-step.animate {
+  opacity: 1;
+  transform: scale(1);
+}

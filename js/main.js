@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
             mobileToggle.classList.toggle('active');
         });
-    }
     
     // Smooth Scrolling for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -71,51 +70,53 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', highlightNavLink);
     
-    // Form Validation
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Basic validation
-            let valid = true;
-            const nameInput = document.getElementById('name');
-            const emailInput = document.getElementById('email');
-            const messageInput = document.getElementById('message');
-            
-            // Reset error states
-            document.querySelectorAll('.form-control').forEach(input => {
-                input.classList.remove('error');
-            });
-            
-            // Validate name
-            if (!nameInput.value.trim()) {
-                nameInput.classList.add('error');
-                valid = false;
-            }
-            
-            // Validate email
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(emailInput.value)) {
-                emailInput.classList.add('error');
-                valid = false;
-            }
-            
-            // Validate message
-            if (!messageInput.value.trim()) {
-                messageInput.classList.add('error');
-                valid = false;
-            }
-            
-            if (valid) {
-                // In a real application, you would send the form data to a server here
-                alert('Thank you for your message! We will get back to you soon.');
-                contactForm.reset();
-            } else {
-                alert('Please fill in all required fields correctly.');
-            }
-        });
-    }
-});
+    // Form Validation + Inline Messages (compatible with Formspree)
+const contactForm = document.getElementById('contactForm');
+const formMessage = document.getElementById('formMessage');
 
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        let valid = true;
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+
+        // Reset error states
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.classList.remove('error');
+        });
+
+        // Validate Name
+        if (!nameInput.value.trim()) {
+            nameInput.classList.add('error');
+            valid = false;
+        }
+
+        // Validate Email
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailInput.value)) {
+            emailInput.classList.add('error');
+            valid = false;
+        }
+
+        // Validate Message
+        if (!messageInput.value.trim()) {
+            messageInput.classList.add('error');
+            valid = false;
+        }
+
+        if (!valid) {
+            // Stop submission if invalid
+            e.preventDefault();
+            formMessage.textContent = '⚠️ Please fill in all required fields correctly.';
+            formMessage.className = 'form-message error';
+        } else {
+            // Show submitting message (optional)
+            formMessage.textContent = 'Submitting…';
+            formMessage.className = 'form-message';
+
+            // Let the form submit naturally → Formspree handles the POST
+            // After submission, Formspree will show its thank-you page or redirect
+        }
+    });
+}
