@@ -145,9 +145,61 @@ header {
 }
 
 .hero-logo {
-    height: 500px;
-    margin-bottom: -100px;
+    width: 100%;
+    max-width: 500px; /* keeps it from getting too big on desktop */
+    height: auto; /* maintains aspect ratio */
+    margin-bottom: 2rem; /* adjust spacing */
 }
+
+@media (max-width: 576px) {
+    .hero-logo {
+        max-width: 300px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Header adjustments for smaller screens */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 1rem 1.5rem; /* add extra horizontal padding */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 80px; /* reduce slightly for mobile */
+    }
+
+    .mobile-toggle {
+        font-size: 1.8rem; /* ensure burger icon fits well */
+    }
+}
+
+@media (max-width: 576px) {
+    .header-container {
+        padding: 0.8rem 1rem;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .mobile-toggle {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 8rem;
+    }
+}
+@media (max-width: 576px) {
+    .hero {
+        padding-top: 7rem;
+    }
+}
+
 
 .footer-logo-image {
     height: 70px;
