@@ -1,19 +1,7 @@
-
 /**
  * Layout Update Styles
  * Additional styles for the updated layout components
  */
-
-/* Banner Section */
-.banner-section {
-    background: linear-gradient(135deg, #3a7bd5, #00d2ff);
-    padding: 3rem 0;
-    margin: 2rem 0;
-    color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-
-/* Layout Update CSS */
 
 /* Navbar Styling */
 .header-container {
@@ -35,12 +23,12 @@
 
 /* Banner Section */
 .banner-section {
-    background: var(--gradient-primary);
-    color: white;
-    width: 50%;
-    border-radius: 0px 50px 0px 50px;
-    padding: 40px 0;
-    margin: auto;
+    background: linear-gradient(135deg, #3a7bd5, #00d2ff); /* from your branch */
+    padding: 3rem 0;
+    margin: 2rem 0;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .banner-container {
