@@ -118,11 +118,8 @@ a:hover {
 header {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
@@ -131,6 +128,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    width: 100%;
+}
+
+.hero-logo, .logo img {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 .logo {
@@ -140,14 +143,16 @@ header {
 }
 
 .logo img {
-    height: 100px;
+    width: 100%;  
     border-radius: 25%;
+    color: white;
 }
+
 
 .hero-logo {
     width: 100%;
     max-width: 500px; /* keeps it from getting too big on desktop */
-    height: auto; /* maintains aspect ratio */
+    height: 500px; /* maintains aspect ratio */
     margin-bottom: 2rem; /* adjust spacing */
 }
 
@@ -376,6 +381,9 @@ header {
     color: var(--white);
     text-align: center;
     padding: 5rem 0;
+    width: 60%;
+    margin: 0 auto 5rem auto;
+    border-radius: 50px 0 50px 0;
 }
 
 .cta-section h2 {
