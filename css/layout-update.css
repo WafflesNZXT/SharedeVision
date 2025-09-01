@@ -266,9 +266,8 @@
 /* Process Grid Update */
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 90px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 100px;
 }
 
 .process-item {
