@@ -1,3 +1,4 @@
+
 /**
  * Layout Update Styles
  * Additional styles for the updated layout components
@@ -11,6 +12,35 @@
     color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+/* Layout Update CSS */
+
+/* Navbar Styling */
+.header-container {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 0;
+}
+
+.nav-menu .nav-link {
+    color: white;
+    font-weight: 500;
+}
+
+.logo img {
+    max-height: 200px;
+    max-width: 100%;
+    color: white;
+}
+
+/* Banner Section */
+.banner-section {
+    background: var(--gradient-primary);
+    color: white;
+    width: 50%;
+    border-radius: 0px 50px 0px 50px;
+    padding: 40px 0;
+    margin: auto;
 }
 
 .banner-container {

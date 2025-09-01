@@ -32,7 +32,7 @@
 
 /* Section Titles (scroll-triggered) */
 .section-title h2 {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(30px);
   transition: all 1s ease-out;
 }
@@ -153,7 +153,7 @@
 .deliver-step.animate {
   opacity: 1;
   transform: scale(1);
-=======
+}
 /* Animations and Transitions for Sharede Vision */
 
 /* Fade In Animation */
@@ -248,7 +248,7 @@
 
 .animate-scale-in {
     animation: scaleIn 0.8s ease forwards;
-    opacity: 0;
+    opacity: 1;
 }
 
 .animate-pulse {
@@ -556,3 +556,4 @@
     from, to { border-color: transparent }
     50% { border-color: var(--teal) }
 
+}
