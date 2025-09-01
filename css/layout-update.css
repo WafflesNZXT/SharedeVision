@@ -1,7 +1,4 @@
-/**
- * Layout Update Styles
- * Additional styles for the updated layout components
- */
+/* Layout Update CSS */
 
 /* Navbar Styling */
 .header-container {
@@ -23,114 +20,86 @@
 
 /* Banner Section */
 .banner-section {
-    background: linear-gradient(135deg, #3a7bd5, #00d2ff); /* from your branch */
-    padding: 3rem 0;
-    margin: 2rem 0;
-    color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: var(--gradient-primary);
+    color: white;
+    width: 50%;
+    border-radius: 0px 50px 0px 50px;
+    padding: 40px 0;
+    margin: auto;
 }
 
 .banner-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .banner-content {
-    text-align: center;
+    flex: 1;
+    min-width: 300px;
+    padding-right: 30px;
+}
+
+.banner-action {
+    margin-top: 20px;
 }
 
 .banner-content h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
 }
 
 .banner-content p {
     font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 0;
 }
 
-.banner-action {
-    margin-top: 1.5rem;
-}
-
-.banner-action .btn {
-    padding: 0.8rem 2rem;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-}
-
-/* Horizontal Scrolling Cards */
-.scroll-container {
-    position: relative;
-    width: 100%;
-    margin: 2rem 0;
-    padding: 1rem 0;
-}
-
-.scroll-wrapper {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    padding: 1rem 0.5rem;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-}
-
-.scroll-wrapper::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-}
-
-.scroll-item {
-    flex: 0 0 auto;
-    width: 300px;
-    margin-right: 1.5rem;
-}
-
-.scroll-controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 1.5rem;
-}
-
-.scroll-btn {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+/* Alternating Sections */
+.section-alt {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 60px 0;
+    gap: 40px;
 }
 
-.scroll-btn:hover {
-    background-color: #f5f5f5;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.section-alt-reverse {
+    flex-direction: row-reverse;
 }
 
-.scroll-btn i {
-    color: #333;
-    font-size: 1rem;
+.section-alt-image {
+    flex: 1;
+    min-width: 300px;
 }
 
-/* Card Square Design */
-.card-square {
-    background-color: #fff;
+.section-alt-image img {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-alt-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.section-alt-content h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.section-alt-content p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Square Card Layout */
+.card-square {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
@@ -138,11 +107,11 @@
 
 .card-square:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .card-content {
-    padding: 1.5rem;
+    padding: 25px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -151,88 +120,184 @@
 .card-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
+    align-items: flex-start;
+    margin-bottom: 15px;
 }
 
 .card-title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin: 0;
-    color: #333;
-    font-weight: 600;
+    color: var(--color-primary);
 }
 
 .card-icon {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #3a7bd5, #00d2ff);
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    color: white;
 }
 
 .card-icon i {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+}
+
+.card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .card-body {
-    flex-grow: 1;
+    flex: 1;
 }
 
 .card-body p {
     margin: 0;
-    color: #666;
     line-height: 1.6;
 }
 
-/* Process Grid with Cards */
+/* Horizontal Scrolling */
+.scroll-container {
+    position: relative;
+    padding: 20px 0;
+    margin: 30px 0;
+}
+
+.scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.scroll-item {
+    flex: 0 0 300px;
+    min-width: 300px;
+    height: 350px;
+}
+
+.scroll-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.scroll-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+/* Accordion */
+.accordion {
+    margin: 20px 0;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-header {
+    background: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    background: #f9f9f9;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 15px 20px;
+    max-height: 500px;
+}
+
+/* Process Grid Update */
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 90px;
+    margin-top: 40px;
 }
 
 .process-item {
-    margin-bottom: 1.5rem;
+    height: 100%;
+    width: 400px;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    .section-alt {
+        flex-direction: column;
+    }
+    
+    .section-alt-reverse {
+        flex-direction: column;
+    }
+    
+    .banner-container {
+        flex-direction: column;
+    }
+    
+    .banner-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    
     .scroll-item {
-        width: 260px;
-    }
-    
-    .banner-content h2 {
-        font-size: 1.8rem;
-    }
-    
-    .banner-content p {
-        font-size: 1rem;
-    }
-    
-    .process-grid {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    }
-}
-
-@media (max-width: 480px) {
-    .scroll-item {
-        width: 220px;
-    }
-    
-    .card-title {
-        font-size: 1.1rem;
-    }
-    
-    .banner-content h2 {
-        font-size: 1.5rem;
-    }
-    
-    .process-grid {
-        grid-template-columns: 1fr;
+        flex: 0 0 250px;
+        min-width: 250px;
     }
 }
 
