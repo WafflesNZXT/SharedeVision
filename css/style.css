@@ -116,7 +116,7 @@ a:hover {
 
 /* Header & Navigation */
 header {
-    position: fixed;
+    position: static;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -250,7 +250,7 @@ header {
 .hero {
     background: var(--gradient-primary);
     color: var(--white);
-    padding: 10rem 0 5rem;
+    padding: 5rem 0 5rem;
     position: relative;
     overflow: hidden;
 }
