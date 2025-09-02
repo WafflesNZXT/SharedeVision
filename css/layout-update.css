@@ -13,18 +13,21 @@
 }
 
 .logo img {
-    max-height: 200px;
-    max-width: 100%;
+    height: 250px;
+    width: 250px;
     color: white;
+    position: absolute;
+    left: 150px;
+    top: -20px;
 }
 
 /* Banner Section */
 .banner-section {
     background: var(--gradient-primary);
     color: white;
-    width: 50%;
+    width: 70%;
     border-radius: 0px 50px 0px 50px;
-    padding: 40px 0;
+    padding: 40px 0px;
     margin: auto;
 }
 
@@ -55,16 +58,41 @@
     margin-bottom: 0;
 }
 
+/* Gradient for Landing Page */
+.gradient-bg {
+    background: linear-gradient(90deg, var(--teal), var(--blue), var(--purple));
+    min-height: 100vh;
+    width: 100%;
+}
+
 /* Alternating Sections */
+.services-container-home {
+    max-width: 2000px;
+    margin: auto;
+}
+
 .section-alt {
     display: flex;
     align-items: center;
-    margin: 60px 0;
+    margin: 40px 0;
     gap: 40px;
+    margin-left: -60px;
+}
+
+.section-alt-image {
+   max-width: 80px;
+   margin-left: 100px;
 }
 
 .section-alt-reverse {
     flex-direction: row-reverse;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.section-alt-reverse-image {
+    max-width: 80px;
+    margin-right: 100px;
 }
 
 .section-alt-image {

@@ -32,6 +32,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Accordion Dropdown Functionality
+document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', function() {
+        const item = this.parentElement;
+        const content = item.querySelector('.accordion-content');
+        const icon = this.querySelector('.accordion-icon i');
+
+        // Toggle active class
+        item.classList.toggle('active');
+
+        // Toggle content visibility
+        if (item.classList.contains('active')) {
+            content.style.display = 'block';
+            if (icon) icon.classList.add('rotated');
+        } else {
+            content.style.display = 'none';
+            if (icon) icon.classList.remove('rotated');
+        }
+    });
+});
+
+// Initialize: Hide all except active
+document.querySelectorAll('.accordion-item').forEach(item => {
+    const content = item.querySelector('.accordion-content');
+    if (item.classList.contains('active')) {
+        content.style.display = 'block';
+    } else {
+        content.style.display = 'none';
+    }
+});
+
     // Sticky Header
     const header = document.querySelector('header');
     const heroSection = document.querySelector('.hero');
