@@ -79,6 +79,29 @@ a:hover {
     text-align: center;
 }
  
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+ 
+.text-left {
+    text-align: left;
+}
+ 
+.bg-light {
+    background-color: var(--light-gray);
+}
+ 
+.lead {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+ 
+.mt-5 {
+    margin-top: 3rem;
+}
+ 
 @media (max-width: 768px) {
     .container {
         padding: 0 1.5rem;
@@ -436,6 +459,80 @@ header {
     list-style: none;
 }
  
+/* Features Grid for About Page */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+ 
+.feature-box {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+ 
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+ 
+.feature-box h3 {
+    color: var(--purple);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+ 
+/* Contact Page Styles */
+.contact-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+ 
+.contact-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+.contact-benefits {
+    margin-bottom: 3rem;
+}
+ 
+.contact-benefits h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--purple);
+}
+ 
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+ 
+/* Service Content */
+.service-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+ 
+/* Page Header */
+.page-header {
+    padding: 4rem 0 2rem;
+    color: var(--white);
+    text-align: center;
+}
+ 
+.page-header h1 {
+    margin-bottom: 0;
+}
+ 
 .feature-item {
     margin-bottom: 1.5rem;
     display: flex;
@@ -494,6 +591,14 @@ header {
  
 .form-group {
     margin-bottom: 1.5rem;
+    text-align: left;
+}
+ 
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark-gray);
 }
  
 .form-control {
@@ -503,11 +608,13 @@ header {
     border-radius: 5px;
     font-family: 'Sora', sans-serif;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
  
 .form-control:focus {
     outline: none;
     border-color: var(--blue);
+    box-shadow: 0 0 0 2px rgba(49, 119, 236, 0.1);
 }
  
 /* Footer */
@@ -587,6 +694,49 @@ footer {
     h2 {
         font-size: 2rem;
     }
+    
+    /* Features grid mobile */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-box {
+        padding: 1.5rem;
+    }
+    
+    /* Page header mobile */
+    .page-header {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    /* Contact form mobile */
+    .contact-form-container {
+        padding: 0 1rem;
+    }
+    
+    .contact-intro {
+        padding: 0 1rem;
+    }
+    
+    /* Form mobile improvements */
+    .form-control {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
 }
  
 @media (max-width: 576px) {
@@ -618,6 +768,48 @@ footer {
         width: 95%;
         border-radius: 25px;
         padding: 3rem 1rem;
+    }
+    
+    /* Features grid small mobile */
+    .features-grid {
+        gap: 1rem;
+    }
+    
+    .feature-box {
+        padding: 1.2rem;
+    }
+    
+    .feature-box h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Page header small mobile */
+    .page-header {
+        padding: 2.5rem 0 1rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    /* Contact benefits mobile */
+    .contact-benefits {
+        margin-bottom: 2rem;
+    }
+    
+    .features-list {
+        padding: 0;
+    }
+    
+    .feature-item {
+        margin-bottom: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .feature-icon {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
     }
 }
  

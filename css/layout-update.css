@@ -285,13 +285,14 @@
 /* Process Grid Update */
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
  
 .process-item {
     height: 100%;
-    width: 400px;
+    max-width: 100%;
 }
  
 /* Responsive Adjustments */
@@ -362,6 +363,16 @@
         flex: 0 0 250px;
         min-width: 250px;
     }
+    
+    /* Process Grid Mobile */
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .process-item {
+        max-width: 100%;
+    }
 }
  
 @media (max-width: 576px) {
@@ -399,5 +410,10 @@
     
     .accordion-icon {
         font-size: 1.2rem;
+    }
+    
+    /* Process Grid Small Mobile */
+    .process-grid {
+        gap: 1rem;
     }
 }
