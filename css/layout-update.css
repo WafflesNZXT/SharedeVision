@@ -5,7 +5,7 @@
 /* Navbar Styling */
 .header-container {
     width: 100%;
-    padding: 15px 20px;
+    padding: 15px 20px 15px 40px; /* increased left padding to push logo more left */
     border-radius: 0;
 }
  
@@ -15,7 +15,7 @@
 }
  
 .logo img {
-    height: 120px;
+    height: 140px; /* increased from 120px */
     width: auto;
     color: white;
     max-width: 100%;
@@ -299,12 +299,12 @@
 @media (max-width: 768px) {
     /* Header and Logo Mobile */
     .header-container {
-        padding: 15px 20px;
+        padding: 15px 20px; /* reset to normal padding on mobile */
         flex-wrap: wrap;
     }
     
     .logo img {
-        height: 80px;
+        height: 100px; /* slightly bigger than before but smaller than desktop */
     }
     
     .nav-menu {
@@ -377,7 +377,7 @@
  
 @media (max-width: 576px) {
     .logo img {
-        height: 60px;
+        height: 80px; /* increased from 60px for better visibility */
     }
     
     .banner-section {
